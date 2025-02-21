@@ -1,5 +1,9 @@
 # CPP2 Assignments
 
+## Visual Studio
+if you want to use a full featured IDE like visual studio or CLion make sure you have the CMake tools installed
+[link](https://learn.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170) and loading this project _should_ just work
+
 ## Environment Setup
 
 ### Vagrant
