@@ -7,5 +7,15 @@ greatest product. What is the value of this product?
 
 [link to the problem](https://projecteuler.net/problem=8)
 
+* Rubric
+| Description                      | Points |
+| Code Compiles                    | 5      |
+| Code is well formed/easy to read | 5      |
+| Code Contains No Warnings        | 5      |
+| Tests Pass                       | 5      |
 
+
+
+
+  
 
