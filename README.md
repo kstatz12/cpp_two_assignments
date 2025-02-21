@@ -54,3 +54,67 @@ if you are using virtualbox for a provider you have to pass that in
 vagrant up --provider virtualbox
 ```
 
+## Connecting your editor
+
+- in your shell, in the root directory of the project enter `vagrant ssh-config` and copy the output. It should look something like 
+
+``` shell
+Host default
+  HostName 192.168.122.144
+  User vagrant
+  Port 22
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /home/karl/src/cpp_two_assignments/.vagrant/machines/default/libvirt/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+```
+
+- Launch Visual Studio Code and hit Ctrl+Shift+P to open the command pallete
+
+- Choose `Open SSH Configuration File`
+
+- Paste the config
+
+- Change the `Host default` to something like `Host cpp_assignments`
+
+- Open the command pallete again (Ctrl+Shift+P) and search for `Remote SSH: Connect To Host` and choose your host name from the previous step
+
+- This will open a new VSCode window and start installing tools on the remote server
+
+- Once you are fully connected choose `Open Folder` and then choose on `/home/vagrant/code`
+
+- Now you should be able to edit files as if they were local
+
+## Compiling
+
+### SSH
+- in your shell type `vagrant ssh`
+
+- cd into `/home/vagrant/code`
+
+- Enter the following commands to build and compile your project
+
+``` shell
+cmake -S . build
+
+cmake --build build
+```
+
+then to run all the tests
+
+``` shell
+./build/ctest
+```
+
+### In Editor
+
+to build the project you can use the built in hotkey: Ctrl+Shift+B
+
+
+to compile choose `Run Tasks` and choose `cmake compile`
+
+to test run `cmake test`
+
+
