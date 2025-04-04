@@ -7,4 +7,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Add subdirectories (child projects)
 add_subdirectory(${CMAKE_SOURCE_DIR}/algorithms)
+add_subdirectory(${CMAKE_SOURCE_DIR}/library)
 add_subdirectory(${CMAKE_SOURCE_DIR}/chip8)
