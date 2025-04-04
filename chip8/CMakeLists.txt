@@ -35,5 +35,10 @@ add_executable(
   src/main.cpp
 )
 
+target_link_libraries(
+  app_test
+  GTest::gtest_main
+)
+
 include(GoogleTest)
 gtest_discover_tests(app_test)
