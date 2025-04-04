@@ -34,3 +34,6 @@ add_executable(
   app
   src/main.cpp
 )
+
+include(GoogleTest)
+gtest_discover_tests(app_test)
